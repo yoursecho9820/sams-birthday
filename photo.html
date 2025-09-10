@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sam's Birthday Box</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: 'Epilogue', 'Noto Sans', sans-serif;
+    background-color: #FEF6F9;
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none;
+  }
+  .modal.active {
+    display: flex;
+  }
+</style>
+</head>
+<body>
+
+<header class="flex items-center justify-between border-b border-[#FADBEA] px-10 py-4">
+  <div class="flex items-center gap-3">
+    <h1 class="text-xl font-bold text-[#1E1E1E]">Sam's Birthday Box</h1>
+  </div>
+</header>
+
+<main class="px-10 py-12 max-w-7xl mx-auto">
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold text-[#1E1E1E] tracking-tight">Photo Gallery</h1>
+    <p class="mt-4 text-lg text-[#896175]">A collection of cherished moments with you &lt;3</p>
+  </div>
+
+  <!-- Masonry-style gallery -->
+  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+    
+    <!-- Photo Card -->
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal1')">
+      <img src="one.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal2')">
+      <img src="two.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal3')">
+      <img src="three.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal4')">
+      <img src="four.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal5')">
+      <img src="five.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+
+    <div class="relative mb-4 rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300 shadow-lg cursor-pointer" onclick="openModal('modal6')">
+      <img src="six.jpg" class="w-full rounded-2xl object-cover">
+    </div>
+  </div>
+</main>
+
+<!-- Modal structure -->
+<div id="modal1" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal1')">&times;</button>
+    <img src="one.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">This day we went to the beach and laughed endlessly.</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal2')">&times;</button>
+    <img src="two.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">We baked cakes and decorated together—messy but fun!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Placeholder for other modals -->
+<div id="modal3" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal3')">&times;</button>
+    <img src="three.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">Memory caption for this photo.</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal4')">&times;</button>
+    <img src="four.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">Memory caption for this photo.</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal5')">&times;</button>
+    <img src="five.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">Memory caption for this photo.</p>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+  <div class="relative bg-white rounded-2xl max-w-3xl w-full mx-4">
+    <button class="absolute top-4 right-4 text-black text-xl font-bold" onclick="closeModal('modal6')">&times;</button>
+    <img src="six.jpg" class="w-full rounded-t-2xl">
+    <div class="p-6 text-center">
+      <p class="text-gray-800 text-lg">Memory caption for this photo.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('active');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+  }
+</script>
+
+</body>
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 z-20">
+  <ul class="flex gap-4 bg-white/70 backdrop-blur-sm px-6 py-2 rounded-full soft-shadow border border-white/50">
+    <li><a href="main.html" class="text-[var(--text-color)] hover:text-[var(--primary-accent)] font-medium transition">Home</a></li>
+    <li><a href="letters.html" class="text-[var(--text-color)] hover:text-[var(--primary-accent)] font-medium transition">Letters</a></li>
+    <li><a href="photo.html" class="text-[var(--text-color)] hover:text-[var(--primary-accent)] font-medium transition">Photos</a></li>
+    <li><a href="playlist.html" class="text-[var(--text-color)] hover:text-[var(--primary-accent)] font-medium transition">Playlist</a></li>
+    <li><a href="gift.html" class="text-[var(--text-color)] hover:text-[var(--primary-accent)] font-medium transition">Gift</a></li>
+  </ul>
+</nav>
+</html>
